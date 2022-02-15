@@ -45,13 +45,13 @@
 
 //! Roman to Integer
 
-const I = 1;
-const V = 5;
-const X = 10;
-const L = 50;
-const C = 100;
-const D = 500;
-const M = 1000;
+// const I = 1;
+// const V = 5;
+// const X = 10;
+// const L = 50;
+// const C = 100;
+// const D = 500;
+// const M = 1000;
 
 // I - V & X
 
@@ -59,12 +59,26 @@ const M = 1000;
 
 // C - D & M
 
-var romanToInt = function (s) {
-  let sum;
-  for (let i = 0; i < s.length; i++) {
-    sum = sum + s[i];
+// var romanToInt = function (s) {
+//   let sum;
+//   for (let i = 0; i < s.length; i++) {
+//     sum = sum + s[i];
+//   }
+//   console.log("test", sum);
+// };
+
+// romanToInt(`LVIII`);
+
+//!Longest Common Prefix
+
+const preFix = (strs) => {
+  const sample = strs[0].split("");
+
+  for (let i = 0; i < strs.length; i++) {
+    for (let j = 0; j < sample.length; j++) {}
+    console.log(strs[0]);
+    console.log(sample);
   }
-  console.log("test", sum);
 };
 
-romanToInt(`LVIII`);
+preFix(["flower", "flow", "flight"]);
