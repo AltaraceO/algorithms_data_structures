@@ -9,6 +9,11 @@ class Queue {
     this.data = [];
   }
 
+  //*The next element to be returned?
+  peek() {
+    return this.data[this.data.length - 1];
+  }
+
   add(record) {
     this.data.unshift(record);
   }
