@@ -9,6 +9,7 @@
 //     q.remove(); // returns 1;
 
 class Queue {
+  //TODO  learn more about the constructor in a class
   //! in a CLASS whenever a CONSTRUCTOR is called that is used whenever a new instance of that CLASS is called
   constructor() {
     this.dataName = [];
