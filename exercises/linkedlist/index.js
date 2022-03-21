@@ -74,11 +74,18 @@ class LinkedList {
   }
 
   insertLast(data) {
-    if (!this.head) {
+    //*this solution worked but for some reason it tripped up future tests.
+    // if (!this.head) {
+    //   this.head = new Node(data);
+    // }
+    // let node = this.getLast();
+    // node.next = new Node(data);
+    const last = this.getLast();
+    if (last) {
+      last.next = new Node(data);
+    } else {
       this.head = new Node(data);
     }
-    let node = this.getLast();
-    node.next = new Node(data);
   }
 
   getAt(index) {
@@ -95,6 +102,40 @@ class LinkedList {
     }
 
     return null;
+  }
+
+  removeAt(index) {
+    if (!this.head) {
+      return;
+    }
+
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
+    }
+
+    const previous = this.getAt(index - 1);
+
+    if (!previous || !previous.next) {
+      return;
+    }
+
+    previous.next = previous.next.next;
+  }
+
+  insertAt(data, index) {
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    }
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+    //!if GETAT returns false it will go to the second part and GETLAST
+    const previous = this.getAt(index - 1) || this.getLast();
+    const node = new Node(data, previous.next);
+    previous.next = node;
   }
 }
 
