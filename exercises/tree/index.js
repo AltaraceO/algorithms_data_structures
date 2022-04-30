@@ -9,6 +9,7 @@
 // 3) Implement 'traverseBF' and 'traverseDF'
 // on the tree class.  Each method should accept a
 // function that gets called with each element in the tree
+const name = "Ori";
 
 class Node {
   constructor(data) {
